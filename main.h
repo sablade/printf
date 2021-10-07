@@ -11,9 +11,11 @@
  * @sym: symbol/format specifier
  * @f: function pointer to associated function
  */
-struct convert{
+struct convert
+{
 	char *sym;
-	int(*f)(va_list);
+	int (*f)(va_list);
+
 };
 typedef struct convert convert_t;
 
@@ -40,5 +42,6 @@ char *rev_string(char *);
 void write_base(char *str);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int print_unsigned_number(unsigned int);
+int hex_check(int, char);
 
 #endif/** MAIN_H **/
